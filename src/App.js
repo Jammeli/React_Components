@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import Photo from './Component/Photo'
+import FullName from './Component/FullName'
+import Adresses from './Component/Adresses'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
 
 function App() {
+  const style={
+    display: "flex",
+    justifyContent: "center",
+    paddingTop: "31px"
+    
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={style}>
+      <div className="card" style={{width:"24rem"}}>
+      <Photo />
+        <div className="card-body">
+        <FullName />
+          <h5 className="card-title">Full Stack JS Junior</h5>
+          <p className="card-text"><FontAwesomeIcon icon={faPhone} /> +216 29 092 413/ +216 99 035 489</p>
+          <Adresses />
+        </div>
+      </div>
+        
+        
+        
     </div>
   );
 }
